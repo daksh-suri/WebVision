@@ -1,12 +1,12 @@
-// src/pages/HomePage.jsx
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import eventSecretCipher from '../assets/event-secret-cipher.jpeg';
 import eventLuminar from '../assets/event-luminar.jpg';
-import logo from '../assets/logo.png'; // 1. Import the logo
+import logo from '../assets/logo.png'; 
 
 const styles = {
-  // 2. Update the hero container styles
+  
   heroContainer: { 
     minHeight: 'calc(100vh - 80px)', 
     display: 'flex', 
@@ -15,7 +15,7 @@ const styles = {
     alignItems: 'center', 
     textAlign: 'center', 
     padding: '0 20px',
-    // Add these lines for the background
+    
     backgroundImage: `linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url(${logo})`,
     backgroundSize: 'contain',
     backgroundPosition: 'center',

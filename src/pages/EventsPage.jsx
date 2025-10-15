@@ -1,4 +1,4 @@
-// src/pages/EventsPage.jsx
+
 import React from 'react';
 
 const styles = {

@@ -1,7 +1,5 @@
-// src/pages/TeamPage.jsx
 import React from 'react';
-import teamPhoto from '../assets/team-photo.jpg'; // Corrected file extension
-
+import teamPhoto from '../assets/team-photo.jpg'; 
 const styles = {
     container: {
         padding: '60px 20px',

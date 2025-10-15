@@ -10,7 +10,10 @@ import AboutPage from './pages/AboutPage';
 function App() {
   return (
     <BrowserRouter>
+      {/* children component */}
       <Navbar />
+
+      {/* Routes */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/team" element={<TeamPage />} />

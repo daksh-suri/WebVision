@@ -10,9 +10,9 @@ const styles = {
         alignItems: 'center',
         padding: '0 40px',
         height: '80px',
-        backgroundColor: 'rgba(25, 25, 36, 0.8)', // Semi-transparent background
+        backgroundColor: 'rgba(25, 25, 36, 0.8)', 
         borderBottom: '1px solid #2a2a2a',
-        backdropFilter: 'blur(10px)', // Frosted glass effect
+        backdropFilter: 'blur(10px)', 
         position: 'sticky',
         top: 0,
         zIndex: 10,

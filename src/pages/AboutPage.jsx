@@ -1,4 +1,3 @@
-// src/pages/AboutPage.jsx
 import React from 'react';
 import learningSessionImage from '../assets/orientation.jpeg';
 import orientationImage from '../assets/orientation.jpeg';
