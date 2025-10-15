@@ -3,11 +3,26 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import eventSecretCipher from '../assets/event-secret-cipher.jpeg';
 import eventLuminar from '../assets/event-luminar.jpg';
+import logo from '../assets/logo.png'; // 1. Import the logo
 
 const styles = {
-  heroContainer: { minHeight: 'calc(100vh - 80px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '0 20px' },
-  headline: { fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '700', margin: '0 0 1rem 0' },
-  subheading: { fontSize: '1.2rem', lineHeight: '1.6', maxWidth: '600px', margin: '0 auto 2rem auto' },
+  // 2. Update the hero container styles
+  heroContainer: { 
+    minHeight: 'calc(100vh - 80px)', 
+    display: 'flex', 
+    flexDirection: 'column', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    textAlign: 'center', 
+    padding: '0 20px',
+    // Add these lines for the background
+    backgroundImage: `linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url(${logo})`,
+    backgroundSize: 'contain',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  },
+  headline: { fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '700', margin: '0 0 1rem 0', zIndex: 1 }, // Add zIndex
+  subheading: { fontSize: '1.2rem', lineHeight: '1.6', maxWidth: '600px', margin: '0 auto 2rem auto', zIndex: 1 }, // Add zIndex
   button: { backgroundColor: 'var(--primary-color)', color: 'white', border: 'none', padding: '12px 24px', margin: '0 10px', borderRadius: '5px', cursor: 'pointer', fontSize: '1rem', fontWeight: '600' },
   buttonSecondary: { backgroundColor: 'transparent', border: '1px solid var(--primary-color)' },
   section: { padding: '80px 20px', textAlign: 'center' },
@@ -40,7 +55,7 @@ function HomePage() {
       <section style={styles.heroContainer}>
         <h1 style={styles.headline}>A Hub for Innovation & Creativity</h1>
         <p style={styles.subheading}>Welcome to TechXtract, the society where ideas become reality. We are forward-thinking engineers building the future, together.</p>
-        <div>
+        <div style={{zIndex: 1}}>
           <Link to="/team" style={{ textDecoration: 'none' }}>
             <button style={styles.button}>Meet the Team</button>
           </Link>

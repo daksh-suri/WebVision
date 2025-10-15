@@ -1,10 +1,10 @@
 // src/pages/TeamPage.jsx
 import React from 'react';
-import teamPhoto from '../assets/team-photo.jpg';
+import teamPhoto from '../assets/team-photo.jpg'; // Corrected file extension
 
 const styles = {
     container: {
-        padding: '40px 20px',
+        padding: '60px 20px',
         textAlign: 'center',
     },
     title: {
@@ -18,7 +18,8 @@ const styles = {
     image: {
         width: '100%',
         height: 'auto',
-        borderRadius: '8px',
+        borderRadius: '12px',
+        boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)',
     }
 }
 

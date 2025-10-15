@@ -3,17 +3,26 @@ import React from 'react';
 import learningSessionImage from '../assets/orientation.jpeg';
 import orientationImage from '../assets/orientation.jpeg';
 
+const missionPoints = [
+    'To make technology accessible, engaging, and hands-on for every student in the CST community.',
+    'To organize technical sessions, workshops, and events that foster innovation and practical skills.',
+    'To connect students with industry professionals and alumni through expert talks and mentorship.',
+    'To promote a culture of teamwork, leadership, and creative problem-solving through real-world projects and competitions.',
+    'To encourage exploration beyond classrooms — from coding and AI to robotics, cybersecurity, and design.'
+];
+
 const styles = {
-    container: { padding: '40px 20px', maxWidth: '1000px', margin: '0 auto' },
-    pageTitle: { textAlign: 'center', fontSize: '3rem', marginBottom: '40px' },
+    container: { padding: '60px 20px', maxWidth: '1000px', margin: '0 auto' },
+    pageTitle: { textAlign: 'center', fontSize: '3rem', marginBottom: '60px' },
     section: { marginBottom: '60px' },
-    sectionTitle: { fontSize: '2.5rem', marginBottom: '20px', textAlign: 'center', borderBottom: '2px solid var(--primary-color)', paddingBottom: '10px', display: 'inline-block' },
-    missionText: { fontSize: '1.2rem', lineHeight: '1.8', textAlign: 'center', color: '#b0b0b0', maxWidth: '800px', margin: '0 auto' },
+    sectionTitle: { fontSize: '2.5rem', marginBottom: '30px', textAlign: 'center', borderBottom: '2px solid var(--primary-color)', paddingBottom: '10px', display: 'inline-block' },
+    missionList: { listStyle: 'none', paddingLeft: '0', maxWidth: '800px', margin: '0 auto', textAlign: 'left' },
+    missionListItem: { fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-color-secondary)', marginBottom: '20px', paddingLeft: '25px', position: 'relative' },
     cardsContainer: { display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap', marginTop: '40px' },
-    card: { backgroundColor: '#1e1e1e', borderRadius: '8px', width: '320px', border: '1px solid #2a2a2a', overflow: 'hidden' },
-    cardImage: { width: '100%', height: '200px', objectFit: 'cover' },
-    cardContent: { padding: '20px' },
-    cardTitle: { fontSize: '1.5rem', marginTop: '0' },
+    card: { backgroundColor: 'var(--surface-color)', borderRadius: '12px', width: '350px', border: '1px solid #2a2a2a', overflow: 'hidden' },
+    cardImage: { width: '100%', height: '220px', objectFit: 'cover' },
+    cardContent: { padding: '25px' },
+    cardTitle: { fontSize: '1.5rem', marginTop: '0', color: 'var(--text-color)' },
 };
 
 const activities = [
@@ -29,7 +38,13 @@ function AboutPage() {
                 <div style={{ textAlign: 'center' }}>
                     <h2 style={styles.sectionTitle}>Our Mission</h2>
                 </div>
-                <p style={styles.missionText}>Our mission is to be a hub for innovation, collaboration, and engineering creativity. We aim to empower students by providing a platform to learn, build, and share their passion for technology.</p>
+                <ul style={styles.missionList}>
+                    {missionPoints.map((point, index) => (
+                        <li key={index} style={styles.missionListItem}>
+                           <span style={{ color: 'var(--primary-color)', position: 'absolute', left: 0 }}>&#10148;</span> {point}
+                        </li>
+                    ))}
+                </ul>
             </section>
             <section style={styles.section}>
                 <div style={{ textAlign: 'center' }}>
@@ -41,7 +56,7 @@ function AboutPage() {
                             <img src={activity.image} alt={activity.title} style={styles.cardImage} />
                             <div style={styles.cardContent}>
                                 <h3 style={styles.cardTitle}>{activity.title}</h3>
-                                <p>{activity.description}</p>
+                                <p style={{ color: 'var(--text-color-secondary)' }}>{activity.description}</p>
                             </div>
                         </div>
                     ))}

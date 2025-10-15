@@ -1,8 +1,10 @@
 /* src/index.css */
 :root {
-  --primary-color: #007bff;
-  --background-color: #121212;
-  --text-color: #e0e0e0;
+  --primary-color: #00A3FF; /* A brighter, catchier blue */
+  --background-color: #10101A; /* A deep navy blue */
+  --surface-color: #191924; /* A slightly lighter surface color */
+  --text-color: #EAEAEA;
+  --text-color-secondary: #A0AEC0; /* A softer gray for secondary text */
   --font-family: 'Inter', system-ui, sans-serif;
 }
 
@@ -10,15 +12,22 @@ body {
   margin: 0;
   font-family: var(--font-family);
   background-color: var(--background-color);
+  /* Added a subtle, slow-moving gradient for a modern feel */
+  background: linear-gradient(135deg, #10101A, #181825, #10101A);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 15s ease infinite;
   color: var(--text-color);
+  overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
-.section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
+/* A simple animation for the background gradient */
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Add smooth transitions to links and buttons for a premium feel */
+a, button {
+  transition: all 0.3s ease;
 }

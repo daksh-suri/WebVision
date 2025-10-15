@@ -2,11 +2,11 @@
 import React from 'react';
 
 const styles = {
-  container: { padding: '40px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' },
-  pageTitle: { fontSize: '3rem', marginBottom: '40px' },
-  sectionTitle: { fontSize: '2rem', marginTop: '60px', marginBottom: '20px', borderBottom: '2px solid var(--primary-color)', display: 'inline-block', paddingBottom: '10px' },
+  container: { padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' },
+  pageTitle: { fontSize: '3rem', marginBottom: '60px' },
+  sectionTitle: { fontSize: '2.5rem', marginTop: '60px', marginBottom: '30px', borderBottom: '2px solid var(--primary-color)', display: 'inline-block', paddingBottom: '10px' },
   cardsContainer: { display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap' },
-  card: { backgroundColor: '#1e1e1e', borderRadius: '8px', padding: '20px', width: '300px', border: '1px solid #2a2a2a', textAlign: 'left' },
+  card: { backgroundColor: 'var(--surface-color)', borderRadius: '12px', padding: '25px', width: '320px', border: '1px solid #2a2a2a', textAlign: 'left' },
   cardTitle: { fontSize: '1.5rem', marginTop: '0', color: 'var(--primary-color)' },
 };
 
@@ -32,7 +32,7 @@ function EventsPage() {
           {upcomingEvents.map((event, index) => (
             <div key={index} style={styles.card}>
               <h3 style={styles.cardTitle}>{event.title}</h3>
-              <p>{event.description}</p>
+              <p style={{ color: 'var(--text-color-secondary)' }}>{event.description}</p>
             </div>
           ))}
         </div>
@@ -43,7 +43,7 @@ function EventsPage() {
           {pastEvents.map((event, index) => (
             <div key={index} style={styles.card}>
               <h3 style={styles.cardTitle}>{event.title}</h3>
-              <p>{event.description}</p>
+              <p style={{ color: 'var(--text-color-secondary)' }}>{event.description}</p>
             </div>
           ))}
         </div>

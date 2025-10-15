@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png'; 
+import logo from '../assets/logo.png';
 
 const styles = {
     nav: {
@@ -10,11 +10,16 @@ const styles = {
         alignItems: 'center',
         padding: '0 40px',
         height: '80px',
-        backgroundColor: '#1e1e1e',
+        backgroundColor: 'rgba(25, 25, 36, 0.8)', // Semi-transparent background
         borderBottom: '1px solid #2a2a2a',
+        backdropFilter: 'blur(10px)', // Frosted glass effect
+        position: 'sticky',
+        top: 0,
+        zIndex: 10,
     },
-    logo: { 
-        height: '50px', 
+    logo: {
+        height: '50px',
+        transition: 'transform 0.3s ease',
     },
     navLinks: {
         display: 'flex',
@@ -24,6 +29,7 @@ const styles = {
         color: 'var(--text-color)',
         textDecoration: 'none',
         fontSize: '1rem',
+        fontWeight: '500',
     }
 }
 
